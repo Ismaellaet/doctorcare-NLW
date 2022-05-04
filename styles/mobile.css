@@ -1,0 +1,150 @@
+/* ==== Variables ==== */
+:root {
+    font-size: 62.5%;
+    /* 10px */
+
+    --brand: #FF4A7D;
+    --brand-light: #F7F9F9;
+    --brand-green-light: #C5E8E2;
+    --gray-headline: #212529;
+    --gray-paragraph: #495057;
+
+    --nav-height: 7.2rem
+}
+
+/* ==== Globals ==== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    text-align: center;
+    font-family: "DM Sans";
+    overflow: overlay;
+}
+
+.container {
+    width: 37.5rem;
+    margin: 0 auto;
+    padding: 0 2.4rem;
+}
+
+/* ==== Navigation ==== */
+nav {
+    display: flex;
+
+    height: var(--nav-height);
+
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ==== Navigation Fixed ==== */
+nav.fixed {
+    background-color: var(--brand);
+    width: 100vw;
+}
+
+nav.fixed svg path:nth-child(2) {
+    fill: white;
+}
+
+nav.fixed button path {
+    stroke: white;
+}
+
+/* ==== Header ==== */
+header {
+    padding: 2.4rem;
+}
+
+header::before {
+    content: "";
+    background-color: var(--brand-green-light);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 96.8rem;
+}
+
+header h4 {
+    color: var(--brand);
+
+    margin-bottom: 1.6rem;
+    margin-top: var(--nav-height);
+    ;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+header h1 {
+    color: var(--gray-headline);
+
+    line-height: 130%;
+    font-size: 3.2rem;
+
+    margin-bottom: 2.4rem;
+}
+
+header p {
+    font-size: 1.8rem;
+    color: var(--gray-paragraph);
+    line-height: 150%;
+
+    margin-bottom: 3.2rem;
+}
+
+header a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+
+    border-radius: 4rem;
+    width: 25.6rem;
+
+    background: var(--brand);
+    color: white;
+
+    margin: auto;
+    padding: 1.6rem 3.2rem;
+
+    font-size: 1.4rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+header svg {
+    margin-top: 8.4rem;
+}
+
+/* ==== Menu Expanded ==== */
