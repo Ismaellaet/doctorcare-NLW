@@ -1,10 +1,10 @@
-function fixed() {
+function onScroll() {
     const nav = document.querySelector("nav");
 
     if (scrollY > 0) {
-        nav.classList.add("fixed");
+        nav.classList.add("scroll")
     } else {
-        nav.classList.remove("fixed");
+        nav.classList.remove("scroll")
     }
 }
 
@@ -13,5 +13,5 @@ function openMenu() {
 }
 
 function closeMenu() {
-    document.body.classList.remove("menu-expanded")
+    document.body.classList.remove("menu-expanded");
 }
