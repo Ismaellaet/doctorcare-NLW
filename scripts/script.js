@@ -4,6 +4,30 @@ onScroll();
 function onScroll() {
     showNavigation();
     showBackToTopButton();
+
+    activeMenuAtCurrentSection(home);
+    activeMenuAtCurrentSection(services);
+    activeMenuAtCurrentSection(about);
+}
+
+function activeMenuAtCurrentSection(section) {
+    const targetLine = scrollY + innerHeight / 2;
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    const sectionEndsAt = sectionTop + sectionHeight;
+
+    const sectionTopReachOrPassedTarget = targetLine >= sectionTop;
+    const sectionEndPassedTargetLine = sectionEndsAt <= targetLine;
+
+    const sectionBoundaries = sectionTopReachOrPassedTarget && !sectionEndPassedTargetLine;
+
+    const sectionId = section.getAttribute("id");
+    const sectionElement = document.querySelector(`.menu a[href*=${sectionId}]`);
+
+    sectionElement.classList.remove("active");
+    if (sectionBoundaries) {
+        sectionElement.classList.add("active");
+    }
 }
 
 function showNavigation() {
