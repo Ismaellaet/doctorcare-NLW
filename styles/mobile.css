@@ -130,6 +130,10 @@ section .content p {
     gap: 3.2rem;
 }
 
+.swiper {
+    width: 100%;
+}
+
 /*==== Custom colors ====*/
 nav .logo path[fill*="#00856F"],
 #backToTopButton circle {
@@ -396,6 +400,49 @@ body.menu-expanded button path {
     margin-bottom: 6rem;
 }
 
+/*==== Testimonials ====*/
+#testimonials h2 {
+    margin-bottom: 6rem;
+}
+
+#testimonials .swiper .card {
+    background: var(--brand-beige);
+    margin-bottom: 7.2rem;
+    padding: 2.4rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+#testimonials .swiper .card p {
+    text-align: left;
+}
+
+#testimonials .swiper.card svg:nth-child(3) {
+    margin-inline: auto;
+}
+
+#testimonials .swiper .card .profile {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+#testimonials .swiper .card .profile img {
+    width: 4rem;
+}
+
+#testimonials .swiper .card .profile span {
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 2.8rem;
+}
+
+#testimonials .swiper .swiper-pagination-bullet {
+    background-color: var(--primary-color);
+}
+
 /*==== Contact ====*/
 #contact {
     text-align: left;
@@ -450,14 +497,15 @@ footer .social-links {
 /*==== Back To Top ====*/
 #backToTopButton {
     position: fixed;
-    bottom: 5rem;
-    right: 2.5rem;
+    bottom: 2rem;
+    right: 1rem;
 
     opacity: 0;
     visibility: hidden;
 
     transform: translateY(-50%);
     transition: 200ms;
+    z-index: 100;
 }
 
 #backToTopButton.show {
@@ -499,6 +547,10 @@ footer .social-links {
 
     .col-b {
         grid-area: B;
+    }
+
+    .swiper {
+        width: 80rem;
     }
 
     /*== Navigation ==*/
