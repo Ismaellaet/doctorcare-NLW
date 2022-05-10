@@ -465,8 +465,42 @@
             </div>
 
             <div class="col-b">
-                <img src="./assets/homem-negro-sorrindo-com-moletom-bege-mexendo-no-celular.png"
-                    alt="Homem negro sorrindo com moletom bege mexendo no celular">
+                <form>
+                    <fieldset>
+                        <legend>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4 5.00002C3.45228 5.00002 3 5.4523 3 6.00002V18C3 18.5477 3.45228 19 4 19H20C20.5477 19 21 18.5477 21 18V6.00002C21 5.4523 20.5477 5.00002 20 5.00002H4ZM1 6.00002C1 4.34773 2.34772 3.00002 4 3.00002H20C21.6523 3.00002 23 4.34773 23 6.00002V18C23 19.6523 21.6523 21 20 21H4C2.34772 21 1 19.6523 1 18V6.00002Z"
+                                    fill="#00856F" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M1.18073 5.42653C1.49745 4.97408 2.12098 4.86405 2.57343 5.18076L12 11.7793L21.4265 5.18076C21.879 4.86405 22.5025 4.97408 22.8192 5.42653C23.1359 5.87898 23.0259 6.50251 22.5734 6.81923L12.5734 13.8192C12.2291 14.0603 11.7708 14.0603 11.4265 13.8192L1.4265 6.81923C0.974052 6.50251 0.864017 5.87898 1.18073 5.42653Z"
+                                    fill="#00856F" />
+                            </svg>
+                            Preencha o formulário
+                        </legend>
+
+                        <label for="name">Nome completo</label>
+                        <input type="text" placeholder="Seu nome completo" id="name" required />
+
+                        <label for="phone">Número de telefone</label>
+                        <input type="tel" id="phone" name="phone" pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}"
+                            placeholder="(11)12345-1234" required />
+
+                        <label for="description">Como podemos ajudá-lo?</label>
+                        <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                    </fieldset>
+
+                    <button>
+                        Enviar formulário
+                        <svg width="20" height="20" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.37705 5.94876C2.04299 5.94876 1.77218 6.21956 1.77218 6.55362C1.77218 6.88767 2.04298 7.15848 2.37704 7.15848L2.37705 5.94876ZM10.8379 6.55368L11.2656 6.98138C11.5018 6.74517 11.5018 6.3622 11.2656 6.12598L10.8379 6.55368ZM7.70139 2.5618C7.46517 2.32559 7.0822 2.32559 6.84598 2.5618C6.60977 2.79802 6.60977 3.18099 6.84598 3.41721L7.70139 2.5618ZM6.84598 9.69016C6.60977 9.92637 6.60977 10.3094 6.84598 10.5456C7.0822 10.7818 7.46517 10.7818 7.70139 10.5456L6.84598 9.69016ZM2.37704 7.15848L10.8379 7.15854L10.8379 5.94882L2.37705 5.94876L2.37704 7.15848ZM6.84598 3.41721L10.4102 6.98138L11.2656 6.12598L7.70139 2.5618L6.84598 3.41721ZM10.4102 6.12598L6.84598 9.69016L7.70139 10.5456L11.2656 6.98138L10.4102 6.12598Z"
+                                fill="white" />
+                        </svg>
+
+                    </button>
+                </form>
             </div>
         </div>
     </section>

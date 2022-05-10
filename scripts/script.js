@@ -71,4 +71,7 @@ ScrollReveal(customizationOfScrollReveal)
         #services card,
         #about,
         #about header,
-        #about .content`)
+        #about .content,
+        #testimonials header,
+        #testimonials .content,
+        #contact`)
